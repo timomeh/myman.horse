@@ -3,7 +3,7 @@
   <meta name="description" content="🐴🤝🐴 my man">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="https://myman.horse/myman.png">
-  <meta property="og:image:height" content="650">
+  <meta property="og:image:height" content="649">
   <meta property="og:image:width" content="653">
   <link rel="icon" href="https://myman.horse/favicon.png">
   <title>🐴🤝🐴</title>
@@ -12,13 +12,24 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 653px;
-      height: 650px;
+      width: 100%;
+      max-width: 653px;
+      height: auto;
       margin-top: -325px;
       margin-left: -326px;
     }
+
+    @media (max-width: 660px) {
+      img {
+        width: 320px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: -160px;
+        margin-left: -160px;
+      }
+    }
   </style>
 <body>
-  <img src="/myman.jpg" alt="my man 🐴🤝🐴" width="653" height="650" />
+  <img src="/myman.jpg" alt="my man 🐴🤝🐴" width="653" height="649" />
 </body>
 </html>
