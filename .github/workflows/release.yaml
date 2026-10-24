@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: bash scripts/deploy.sh
+        env:
+          SITE_URL: https://myman.horse
+          GIT_PAGES_PASSWORD: ${{ secrets.GIT_PAGES_PASSWORD }}
